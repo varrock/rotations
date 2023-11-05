@@ -1,0 +1,76 @@
+**__Necromancy Minion Tank/Free__**
+
+.
+**__Preset and Relics__**
+.
+{
+  "embed": {
+    "title": "",
+    "color": 10181046,
+    "image": {
+            "url": "https://media.discordapp.net/attachments/1169659606377709680/1169694811817787502/image.png"
+        },
+    "fields": [
+      {
+        "name": "__Preset Breakdown__",
+        "value": "<:eofor:745279787471470713> - <:deathguard90:1138809243143766118> (Death Guard)",
+        "inline": true
+      }
+    ]
+  }
+}
+.embed:json
+
+.
+> **__Rotation__**
+
+.
+**Pre Build**
+
+See base for indication ability <:invokedeath:1137809121983336548>
+
+<:conjurearmy:1166094935066423348> → <:splitsoul:1137809168368148490> → <:lifetransfer:1137809128136388819> → <:commandskeleton:1137809194423160883> (4.8s)
+
+.
+**Phase 1 (3000k - 2100k)**
+
+<:deathskulls:1159434663903899728> → <:soulsap:1137809140476031057> → <:omniguard:1138809234922934282> <:spec:537340400273195028> → <:flankicon:841419289755385866> <:soulstrike:1137809142376058910> → <:soulsap:1137809140476031057> → <:necroauto:1137809137401602109>
+
+.
+**Phase 2 (2100k - 1800k)**
+
+<:touchofdeath:1137809175980810380> → <:soulsap:1137809140476031057> → <:stormshards:536256663641128971> → <:commandskeleton:1137809194423160883> → <:soulsap:1137809140476031057> →  <:deathguard90:1138809243143766118> <:eofspec:746403211908481184> → <:necroauto:1137809137401602109> → <:soulsap:1137809140476031057> → <:touchofdeath:1137809175980810380> 
+
+Wait 1 tick before <:deathguard90:1138809243143766118> <:eofspec:746403211908481184> if boss phases on <:necroauto:1137809137401602109>, add an extra abilty and don't wait if boss phases on <:touchofdeath:1137809175980810380>
+
+.
+**Phase 3**
+
+<:livingdeath:1159434908486357072> + <:adrenrenewal:736298121704767538> → <:touchofdeath:1137809175980810380> → <:soulsap:1137809140476031057> → <:deathskulls:1159434663903899728> → <:commandskeleton:1137809194423160883>  → <:volleyofsouls:1159435029592686642> → <:threadsoffate:1137809172335951933> → <:soulsap:1137809140476031057> → <:volleyofsouls:1159435029592686642> → <:fingerofdeath:1159434801938432010> → <:touchofdeath:1137809175980810380>
+
+.
+**Pillars**
+
+__Pillar 1__ - <:deathskulls:1159434663903899728> → <:soulsap:1137809140476031057> → <:necroauto:1137809137401602109>
+
+__Pillar 2__ - <:fingerofdeath:1159434801938432010> → <:necroauto:1137809137401602109> → if needed <:soulsap:1137809140476031057>
+
+__Pillar 3__ - <:splitsoul:1137809168368148490>→ <:touchofdeath:1137809175980810380> → <:deathguard90:1138809243143766118> <:eofspec:746403211908481184> → if needed <:soulsap:1137809140476031057>
+
+__Pillar 4__ - <:omniguard:1138809234922934282> <:spec:537340400273195028> / <:flankicon:841419289755385866> <:soulstrike:1137809142376058910> → <:necroauto:1137809137401602109> → <:soulsap:1137809140476031057>
+
+.
+**Zaros**
+
+<:deathskulls:1159434663903899728> → <:flankicon:841419289755385866> <:soulstrike:1137809142376058910> →  <:flankicon:841419289755385866> <:soulstrike:1137809142376058910> / <:omniguard:1138809234922934282> <:spec:537340400273195028> → <:necroauto:1137809137401602109> / <:fingerofdeath:1159434801938432010>
+
+> **__Example Kills__**
+.
+{
+  "embed": {
+    "title": "",
+    "description": "⬥ Sept 13 2023 - Beta Fox - [Glacies](https://www.youtube.com/watch?v=0XzxGmh60aM)\n",
+    "color": 10181046
+  }
+}
+.embed:json
