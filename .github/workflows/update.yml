@@ -9,8 +9,9 @@ on:
       - 'main'
 
 jobs:
-  changed_files:
+  deployment:
     runs-on: ubuntu-20.04  # windows-latest || macos-latest
+    environment: production
     strategy:
       matrix:
         node-version: [16.x]
