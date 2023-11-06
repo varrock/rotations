@@ -40,7 +40,7 @@ jobs:
             const res = await axios.get(endpoint);
             console.log('${{ steps.changed-files.outputs.all_changed_files }}');
             console.log(res.status);
-            console.log('${{ secrets.AUTH_TOKEN }}');
+            console.log('${{ secrets.AUTH_TOKEN }}'.length);
   # build:
 
   #   runs-on: ubuntu-20.04
