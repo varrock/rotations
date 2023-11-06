@@ -1,12 +1,14 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Get updated files
+name: Make API request to update rotation when any rotation is changed
 
 on:
   push:
     branches:
       - 'main'
+    paths:
+      - '**.txt'
 
 jobs:
   deployment:
@@ -40,32 +42,4 @@ jobs:
             const res = await axios.get(endpoint);
             console.log('${{ steps.changed-files.outputs.all_changed_files }}');
             console.log(res.status);
-            console.log('${{ secrets.AUTH_TOKEN }}'.length);
-  # build:
-
-  #   runs-on: ubuntu-20.04
-
-  #   strategy:
-  #     matrix:
-  #       node-version: [16.x]
-  #       # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - name: Use Node.js ${{ matrix.node-version }}
-  #     uses: actions/setup-node@v3
-  #     with:
-  #       node-version: ${{ matrix.node-version }}
-  #       cache: 'npm'
-  #   - run: |
-  #         for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-  #           echo "$file was changed"
-  #         done
-    # - run: npm run leaderboard
-    #   env:
-    #     DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN_DEV }}
-    # - run: npm run changelog
-    #   env:
-    #     DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN_DEV }}
-    #     SHA: ${{ github.sha }}
-    #     MODULE: Leaderboard
+            console.log('${{ secrets.AUTH_TOKEN }}');
