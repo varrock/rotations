@@ -11,7 +11,11 @@ on:
 jobs:
   changed_files:
     runs-on: ubuntu-20.04  # windows-latest || macos-latest
-    name: Test changed-files
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    name: Get all changed files and make API request
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,26 +32,32 @@ jobs:
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             echo "$file was changed"
           done
-  build:
 
-    runs-on: ubuntu-20.04
+      - name: Make request to update file
+        uses: actions/github-script@v6
+        with:
+          script: |
+            console.log('${{ steps.changed-files.outputs.all_changed_files }}');
+  # build:
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+  #   runs-on: ubuntu-20.04
 
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: |
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            echo "$file was changed"
-          done
+  #   strategy:
+  #     matrix:
+  #       node-version: [16.x]
+  #       # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - name: Use Node.js ${{ matrix.node-version }}
+  #     uses: actions/setup-node@v3
+  #     with:
+  #       node-version: ${{ matrix.node-version }}
+  #       cache: 'npm'
+  #   - run: |
+  #         for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+  #           echo "$file was changed"
+  #         done
     # - run: npm run leaderboard
     #   env:
     #     DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN_DEV }}
